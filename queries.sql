@@ -32,3 +32,19 @@ JOIN Customer
 ON [Order].CustomerId = Customer.Id
 JOIN Employee
 ON [Order].EmployeeId = Employee.Id
+
+-- STRETCH 1
+
+SELECT CategoryName, Count(*) as NumberOfProducts
+FROM [Categories]
+JOIN [Products]
+ON Categories.CategoryId = Products.CategoryId
+GROUP BY Categories.CategoryName
+
+-- STRETCH 2
+
+SELECT OrderDetails.OrderID, Count(*) as ItemCount
+FROM [OrderDetails]
+JOIN [Orders]
+ON OrderDetails.OrderId = Orders.OrderId
+GROUP BY Orders.OrderID
