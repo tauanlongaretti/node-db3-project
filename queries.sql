@@ -26,7 +26,7 @@ order by [product].productname
 
 -- Display the OrderID, Customer's Company Name and the employee's LastName for every order. All columns should be labeled clearly. Displays 16,789 records.
 
-select [Order].id as "OrderId", CompanyName, Employee.LastName as "EmployeeLastName"
+select [Order].id as "Order Id", CompanyName as "Customer's Company Name", Employee.LastName as "Employee's Last Name"
 from [Order] 
 join Customer
 on [Order].CustomerId = Customer.Id
