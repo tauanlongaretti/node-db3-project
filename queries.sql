@@ -22,6 +22,7 @@ from orderdetail
 join product
 on product.id = orderdetail.productid
 where orderdetail.orderid = "10251"
+order by [product].productname
 
 -- Display the OrderID, Customer's Company Name and the employee's LastName for every order. All columns should be labeled clearly. Displays 16,789 records.
 
